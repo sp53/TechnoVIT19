@@ -16,7 +16,8 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
 
@@ -45,6 +46,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(id == R.id.nav_home) {
 
         }
+        else if(id == R.id.nav_about) {
+
+        }
+        else if(id == R.id.nav_schedule) {
+
+        }
+        else if(id == R.id.nav_venue) {
+
+        }
+        else if(id == R.id.nav_gallery) {
+
+        }
+        else if(id == R.id.nav_sponsors) {
+
+        }
+        else if(id == R.id.nav_contact) {
+
+        }
+        /*
+        else if(id == R.id.nav_account) {
+
+        }*/
 
         drawerLayout.closeDrawers();
         return true;

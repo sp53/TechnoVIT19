@@ -25,12 +25,12 @@
             android:title="Contacts" />
     </group>
 
-    <item android:title="Settings">
+    <!--item android:title="Settings">
         <menu>
             <item android:id="@+id/nav_account"
                 android:icon="@drawable/nav_account_icon"
                 android:title="My Account" />
         </menu>
-    </item>
+    </item-->
 
 </menu>
