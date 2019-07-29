@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home_icon"
+            android:title="Home" />
+        <item android:id="@+id/nav_about"
+            android:icon="@drawable/nav_about_icon"
+            android:title="About" />
+        <item android:id="@+id/nav_schedule"
+            android:icon="@drawable/nav_schedule_icon"
+            android:title="Schedule" />
+        <item android:id="@+id/nav_venue"
+            android:icon="@drawable/nav_venue_icon"
+            android:title="Venue" />
+        <item android:id="@+id/nav_gallery"
+            android:icon="@drawable/nav_gallery_icon"
+            android:title="Gallery" />
+        <item android:id="@+id/nav_sponsors"
+            android:icon="@drawable/nav_person_icon"
+            android:title="Sponsors" />
+        <item android:id="@+id/nav_contact"
+            android:icon="@drawable/nav_contacts_icon"
+            android:title="Contacts" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item android:id="@+id/nav_account"
+                android:icon="@drawable/nav_account_icon"
+                android:title="My Account" />
+        </menu>
+    </item>
+
+</menu>
