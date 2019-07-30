@@ -6,12 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
@@ -30,6 +25,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.open,R.string.close);
@@ -44,30 +40,33 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if(id == R.id.nav_home) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new home_fragment()).commit();
 
         }
         else if(id == R.id.nav_about) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new about_fragment()).commit();
 
         }
         else if(id == R.id.nav_schedule) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new schedule_fragment()).commit();
 
         }
         else if(id == R.id.nav_venue) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new venue_fragment()).commit();
 
         }
         else if(id == R.id.nav_gallery) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new gallery_fragment()).commit();
 
         }
         else if(id == R.id.nav_sponsors) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new sponsors_fragment()).commit();
 
         }
         else if(id == R.id.nav_contact) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new contacts_fragment()).commit();
 
         }
-        /*
-        else if(id == R.id.nav_account) {
-
-        }*/
 
         drawerLayout.closeDrawers();
         return true;
