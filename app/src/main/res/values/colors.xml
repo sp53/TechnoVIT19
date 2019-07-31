@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#344955</color>
-    <color name="colorPrimaryDark">#232F34</color>
-    <color name="colorPrimaryLight">#4A6572</color>
-    <color name="colorAccent">#F9AA33</color>
-    <color name="ripple_color_button_styler">#fde0b5</color>
-    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#2A1BDB</color>
+    <color name="colorPrimaryDark">#00ffffff</color>
+    <color name="colorPrimaryLight">#594FC1</color>
+    <color name="colorAccent">#BA6C36</color>
+    <color name="colorBackground">#edecf8</color>
 </resources>
