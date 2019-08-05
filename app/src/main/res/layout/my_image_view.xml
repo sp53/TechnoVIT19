@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="13.5dp"
+    android:layout_marginTop="16.5dp"
+    android:layout_marginEnd="13.5dp"
+    android:layout_marginBottom="16.5dp"
+    android:backgroundTint="#edecf8"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="10dp"
+    app:cardMaxElevation="2dp">
+
+        <ImageView
+            android:id="@+id/displayimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#edecf8"
+            android:layout_margin="8dp"
+            android:src="@drawable/tcvit19logo"/>
+
+    </androidx.cardview.widget.CardView>
