@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        // Opening home initially
+        getSupportFragmentManager().beginTransaction().replace(R.id.nav_fragment,new home_fragment()).commit();
 
     }
 
