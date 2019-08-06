@@ -70,6 +70,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     myBitmap = BitmapFactory.decodeStream(is);
                     Log.d("yoyo","00000");
                     bmp.add(myBitmap);
+                    publishProgress();
                 }
                 return 0;
             } catch (MalformedURLException e) {
@@ -85,6 +86,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         @Override
         protected void onProgressUpdate(Void... values) {
             notifyDataSetChanged();
+            Log.d("makemachine", "onProgressUpdate(): ");
         }
 
         @Override
