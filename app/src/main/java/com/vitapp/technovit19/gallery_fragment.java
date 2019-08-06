@@ -27,7 +27,7 @@ public class gallery_fragment extends Fragment {
         myRecyclerView.setLayoutManager(layoutManager);
         myRecyclerView.setHasFixedSize(true);
 
-        adapter = new MyAdapter();
+        adapter=new MyAdapter();
         myRecyclerView.setAdapter(adapter);
 
         return v;
