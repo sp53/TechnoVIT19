@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/test"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/contacts_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:cropToPadding="true"
+        android:padding="2dp" />
+
+    <LinearLayout
+        android:id="@+id/contacts_linear"
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@id/contacts_pic"
+        android:layout_marginLeft="12dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contacts_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oxygen"
+            android:textColor="@color/colorPrimaryLight"
+            android:text="NAME"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/contacts_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oxygen"
+            android:textSize="16sp"
+            android:text="NUMBER"
+            android:textColor="@color/colorPrimaryLight"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
