@@ -23,7 +23,7 @@ public class gallery_fragment extends Fragment {
         View v=inflater.inflate(R.layout.gallery,container,false);
         myRecyclerView = v.findViewById(R.id.rview);
 
-        layoutManager = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
+        layoutManager = new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false);
         myRecyclerView.setLayoutManager(layoutManager);
         myRecyclerView.setHasFixedSize(true);
 

@@ -42,7 +42,7 @@ public class home_fragment extends Fragment {
         Picasso.get().load("https://imgur.com/W08rj0Z.png").into(vitness);
 
         ImageView taikuun = view.findViewById(R.id.imageView5);
-        Picasso.get().load("https://imgur.com/9eVU5gn.png").into(taikuun);
+        Picasso.get().load("https://imgur.com/9eVU5gn.png").fit().into(taikuun);
 
         return view;
     }

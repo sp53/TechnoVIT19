@@ -3,17 +3,17 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,12 +24,9 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-
-
-
     ArrayList<Bitmap> bmp= new ArrayList<Bitmap>();
     download obj=new download();
-
+    String myurl2[]={"https://homepages.cae.wisc.edu/~ece533/images/airplane.png","https://homepages.cae.wisc.edu/~ece533/images/arctichare.png","https://imgur.com/wgt9SJa.png"};
 
     public MyAdapter()
     {
@@ -39,23 +36,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public void start()
     {
+        /*
         try {
             obj.execute();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        */
     }
 
 
 
     public class download extends AsyncTask<String, Void, Integer>
     {
-        String myurl[]={"https://homepages.cae.wisc.edu/~ece533/images/airplane.png","https://homepages.cae.wisc.edu/~ece533/images/airplane.png","https://homepages.cae.wisc.edu/~ece533/images/airplane.png"};
+        String myurl[]={"https://imgur.com/wgt9SJa.png","https://imgur.com/wgt9SJa.png","https://imgur.com/wgt9SJa.png"};
 
         @Override
         protected Integer doInBackground(String... urls) {
-            Log.d("yoyo","10000"+myurl.length);
-
 
             try {
                 Bitmap myBitmap;
@@ -68,17 +65,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
                     InputStream is = httpc.getInputStream();
                     myBitmap = BitmapFactory.decodeStream(is);
-                    Log.d("yoyo","00000");
                     bmp.add(myBitmap);
                     publishProgress();
                 }
                 return 0;
             } catch (MalformedURLException e) {
                 e.printStackTrace();
-                Log.d("yoyo","00002");
             } catch (IOException e) {
                 e.printStackTrace();
-                Log.d("yoyo","00003");
             }
             return 1;
         }
@@ -86,17 +80,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         @Override
         protected void onProgressUpdate(Void... values) {
             notifyDataSetChanged();
-            Log.d("makemachine", "onProgressUpdate(): ");
         }
 
         @Override
         protected void onPostExecute(Integer integer) {
-
-            Log.d("yoyo","00001");
             notifyDataSetChanged();
-
-
-
         }
     }
 
@@ -111,8 +99,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         ImageView img = holder.imgView.findViewById(R.id.displayimg);
+
+        Picasso.get().load(myurl2[position]).into(img, new com.squareup.picasso.Callback(){
+            @Override
+            public void onSuccess() {
+                ProgressBar pbr = holder.imgView.findViewById(R.id.pbr);
+                pbr.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+
+        });
+
+
+        /*
         try
         {
             img.setImageBitmap(bmp.get(position));
@@ -123,6 +128,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         {
             img.setBackgroundColor(Color.WHITE);
         }
+        */
     }
 
     @Override
